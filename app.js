@@ -13,6 +13,7 @@ const swaggerJSDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 const { use } = require("./routes/index");
 
+// adding the root information
 const swaggerDefinition = {
   openapi: "3.0.0",
   info: {
@@ -20,7 +21,7 @@ const swaggerDefinition = {
     version: "1.0.0",
     description:
       "This is a REST API application made with Express. It retrieves data from JSONPlaceholder.",
-    licence: {
+    license: {
       name: "Licensed Under MIT",
       url: "https://spdx.org/licenses/MIT.html",
     },
@@ -29,11 +30,9 @@ const swaggerDefinition = {
       url: "https://jsonplaceholder.typicode.com",
     },
   },
-
-  //adding the server that will be used for the project. This one will be a simple local host
   servers: [
     {
-      url: "https://localhost:3000",
+      url: "http://localhost:3000",
       description: "Development server",
     },
   ],
