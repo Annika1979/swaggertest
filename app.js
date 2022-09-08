@@ -18,7 +18,25 @@ const swaggerDefinition = {
   info: {
     title: "Express API for JSONPlaceholder",
     version: "1.0.0",
+    description:
+      "This is a REST API application made with Express. It retrieves data from JSONPlaceholder.",
+    licence: {
+      name: "Licensed Under MIT",
+      url: "https://spdx.org/licenses/MIT.html",
+    },
+    contact: {
+      name: "JSONPlaceholder",
+      url: "https://jsonplaceholder.typicode.com",
+    },
   },
+
+  //adding the server that will be used for the project. This one will be a simple local host
+  servers: [
+    {
+      url: "https://localhost:3000",
+      description: "Development server",
+    },
+  ],
 };
 //path to the files that contain the open api definitions
 const options = {
